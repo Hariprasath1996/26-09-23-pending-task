@@ -82,10 +82,45 @@ function sum(x) {
   if (arguments.length === 2) {
   return arguments[0] + arguments[1];
   } else {
-    return function(y) {
-      return x + y;
-    };
-  }
+  return function(y) {
+  return x + y;
+  };
+}
 }
 console.log(sum(2, 3)); 
 console.log(sum(2)(3)); 
+
+// Write a function that counts how many times a specific element appears in an array.
+// const arr = [1, 2, 2, 3, 4, 2, 5];
+// const count = countOccurrences(arr, 2);
+// console.log(count); // Expected Output: 3
+
+function countOccurrences(arr, element) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === element) {
+      count++;
+    }
+  }
+  return count;
+}
+const arr = [1, 2, 2, 3, 4, 2, 5];
+const count = countOccurrences(arr, 2);
+console.log(count);
+
+// 10. Write a function that detects if a given substring exists in a larger string.
+// const largeString = &quot;This is a sample string for testing.&quot;;
+// const substring = &quot;sample&quot;;
+// console.log(doesSubstringExist(largeString, substring)); // Expected Output: true
+
+function doesSubstringExist(largeString, substring) {
+  return largeString.indexOf(substring) !== -1;
+}
+
+const largeString = "This is a sample string for testing.";
+const substring = "sample";
+console.log(doesSubstringExist(largeString, substring));
+
+
+// last code copied from website after i cleared 
+
